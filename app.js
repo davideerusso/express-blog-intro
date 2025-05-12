@@ -10,6 +10,7 @@ app.listen(port, () => {
 
 app.get("/", (req, res) => {
   res.send("Server del mio blog");
+  res.json(posts);
 });
 
 app.get("/bacheca", (req, res) => {
@@ -17,34 +18,33 @@ app.get("/bacheca", (req, res) => {
     {
       Titolo: "luogo 1",
       Contenuto: "...",
-      img: "./img",
+      img: "/image/ciambellone.jpeg",
       tags: ["mare", "montagna", "lago"],
     },
     {
       Titolo: "luogo 2",
       Contenuto: "...",
-      img: "./img",
+      img: "/image/cracker_barbabietola.jpeg",
       tags: ["mare", "montagna", "lago"],
     },
     {
       Titolo: "luogo 3",
       Contenuto: "...",
-      img: "./img",
+      img: "/image/pane_fritto_dolce.jpeg",
       tags: ["mare", "montagna", "lago"],
     },
     {
       Titolo: "luogo 4",
       Contenuto: "...",
-      img: "./img",
+      img: "/image/pasta_barbabietola.jpeg",
       tags: ["mare", "montagna", "lago"],
     },
     {
       Titolo: "luogo 5",
       Contenuto: "...",
-      img: "./img",
+      img: "/torta_paesana.jpeg",
       tags: ["mare", "montagna", "lago"],
     },
     res.json(posts),
   ];
-  res.send("Server del mio blog");
 });
